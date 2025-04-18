@@ -1,0 +1,50 @@
+body {
+  background: #0f1117;
+  color: #f8f8f2;
+  font-family: 'Fira Code', monospace;
+  margin: auto;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: #00ffff;
+  border-bottom: 1px solid #00ffff;
+  padding-bottom: 0.3rem;
+}
+
+a {
+  color: #ff6ec7;
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0 0 5px #ff6ec7;
+}
+
+code, pre {
+  background-color: #1e1e2f;
+  color: #8aff80;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+blockquote {
+  color: #999;
+  border-left: 4px solid #ff00ff;
+  padding-left: 1rem;
+  margin-left: 0;
+}
+
+.theme-selector {
+  color: #0ff;
+  background: #111;
+  border: 1px solid #0ff;
+}
+#themeSelect {
+  color: #0ff;
+  background: #111;
+}
+
+.return-button path {
+  stroke: #0ff;
+}

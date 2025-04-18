@@ -1,0 +1,52 @@
+body {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  margin: auto;
+  line-height: 1.6;
+  text-shadow: 0 0 2px #00ffe0;
+}
+
+h1, h2, h3 {
+  color: #00ffe0;
+  border-bottom: 1px solid #00ffe0;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+code, pre {
+  background-color: #00000080;
+  color: #00ff88;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+blockquote {
+  border-left: 4px solid #ffcc00;
+  padding-left: 1rem;
+  color: #ffe;
+  font-style: italic;
+}
+
+.theme-selector {
+  color: #ffcc00;
+  background: #2c5364;
+  border: 1px solid #0ff;
+}
+#themeSelect {
+  color: #ffcc00;
+  background: #2c5364;
+}
+.return-button path {
+  stroke: #0ff;
+}

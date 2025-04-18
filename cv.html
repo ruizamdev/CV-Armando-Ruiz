@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CV · Armando Ruiz</title>
+  <link id="theme-style" rel="stylesheet" href="themes/terminal.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @page {
+      margin: 0;
+      size: letter;
+    }
+
+    body {
+      transition: background 0.4s ease, color 0.4s ease;
+    }
+
+    #content {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    .theme-selector {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      z-index: 999;
+      font-family: monospace;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    #themeSelect {
+      border: none;
+      font-family: monospace;
+      font-size: inherit;
+      padding: 0.2rem 0.4rem;
+    }
+    
+    .return-button-wrapper {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      cursor: pointer;
+    }
+
+    .return-button {
+      transition: transform 0.3s ease;
+    }
+
+    .return-button-wrapper:hover .return-button  {
+      transform: scale(1.12);
+    }
+
+    @media (max-width: 768px) {
+      .theme-selector {
+        right: 1rem;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        align-items: flex-start;
+      }
+      .theme-selector select {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .theme-selector {
+        width: 40px;
+      }
+      .theme-selector select {
+        color: transparent;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="return-button-wrapper">
+    <a href="./index.html">
+      <svg class="return-button" width="43px" height="43px" stroke-width="1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#0ff"><path d="M6 7V17" stroke="" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.0282 5.2672C17.4217 4.95657 18 5.23682 18 5.73813V18.2619C18 18.7632 17.4217 19.0434 17.0282 18.7328L9.09651 12.4709C8.79223 12.2307 8.79223 11.7693 9.09651 11.5291L17.0282 5.2672Z" stroke="" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </a>
+  </div>
+
+  <div class="theme-selector">
+    <label class="theme-select-label" for="themeSelect"></label>
+    <select id="themeSelect">
+      <option value="terminal">Cyberpunk terminal</option>
+      <option value="glitch">Glitch Hacker</option>
+      <option value="retro">Retrofuturista</option>
+      <option value="dark">Dark Minimal</option>
+    </select>
+  </div>
+
+  <div id="content"></div>
+
+  <!-- Marcador oculto con tu markdown -->
+  <script id="cv-md" type="text/markdown">
+# 👨🏽‍💻 Armando Ruiz  
+**Frontend Developer** · *UX/UI Enthusiast*  
+[ruizam.dev](https://ruizamdev.github.io/ruizam) · [GitHub](https://github.com/Ruizamdev) · [LinkedIn](https://www.linkedin.com/in/ruizam/)  
+Querétaro, México · ✉️ ruiz7am@outlook.com · 📱 +52 487 195 6567  
+
+---
+
+## 🚀 Stack Principal  
+- ⚙️ HTML · CSS · JavaScript (ES6+)  
+- 🛠️ Astro · Web Components · TailwindCSS  
+- 🎨 UI/UX · Animaciones · Diseño Responsivo  
+- ⚡ Git · GitHub  
+
+---
+
+## 🧩 Proyectos Destacados  
+### 🌐 ruizam.dev  
+> Blog personal SPA con navegación suave, animaciones sutiles, diseño modular y tema oscuro/claro.  
+🔗[ruizam.dev](https://ruizamdev.github.io/ruizam/)
+
+### 🎬 The Movie DB  
+> App que consume API REST. Interfaz dinámica con filtros por género, scroll infinito y diseño responsive.  
+🔗[Mex movie db](https://ruizamdev.github.io/the-movie-db-ruizam/)
+
+### 🧱 Impermex  
+> Sitio institucional. Identidad visual limpia, experiencia accesible, enfoque informativo para usuarios no técnicos.  
+🔗[Impermex](https://ruizamdev.github.io/impermex.com/)
+
+---
+
+## 📡 Skills Extra  
+- ⚙️ Linux CLI · VSCode Pro User  
+- 🧠 Notion para organización y gestión de proyectos  
+- 🎭 Diseño de UI estilo retro-futurista y minimalista
+- 🔗 Integración de APIs REST · Deploy continuo  
+
+---
+
+## 🛠️ Formación  
+**CS50x - Harvard (en progreso)**  
+> Fundamentos de ciencias de la computación.
+
+**Platzi**  
+> +20 cursos completados en Frontend, UX/UI, IA para devs, Branding y negocios digitales.  
+🔗[Mis certificaciones](https://platzi.com/p/ArmandoRuiz/)
+
+---
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <script>
+    const rawMd = document.getElementById('cv-md').textContent;
+    document.getElementById('content').innerHTML = marked.parse(rawMd);
+  </script>
+  <script src="./theme-selector.js"></script>
+</body>
+</html>
