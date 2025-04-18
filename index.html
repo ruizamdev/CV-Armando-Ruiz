@@ -77,6 +77,48 @@
       margin-top: 1rem;
     }
 
+    .cv-link-wrapper {
+      box-sizing: border-box;
+      margin: 0;
+      height: fit-content;
+    }
+
+    .cv-link {
+      height: fit-content;
+  color: #FF66C4;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+      align-items: center;
+  transition: color 0.3s ease;
+}
+
+.cv-link:hover {
+  color: #FF2EF2;
+}
+
+.arrow-animada {
+  height: fit-content;
+  display: inline-block;
+  margin-left: 0.4em;
+  color: #00FF9C;
+  animation: pulse-flecha 1s infinite ease-in-out;
+  font-size: 3em;
+}
+
+@keyframes pulse-flecha {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(4px);
+    opacity: 0.6;
+  }
+}
+
+
     @media (max-width: 768px) {
       .theme-selector {
         right: 1rem;
@@ -117,7 +159,7 @@
     <h2>Frontend Developer · UX/UI Enthusiast</h2>
     <p>📍 Querétaro, México · ✉️ <a href="mailto:ruiz7am@outlook.com">ruiz7am@outlook.com</a></p>
     <p>🌐 <a href="https://ruizamdev.github.io/ruizam" target="_blank">ruizam.dev</a> · 🐙 <a href="https://github.com/ruizamdev" target="_blank">github.com/ruizamdev</a></p>
-  <p><a href="cv.html">📄 Ver CV completo</a></p>
+    <p class="cv-link-wrapper"><a href="cv.html" class="cv-link">📄 Ver CV completo <span class="arrow-animada">⇦</span></a></p>
 
     <section class="carta">
       <h2>💌 Carta de Presentación</h2>
